@@ -15,4 +15,5 @@ app.use(express.json());
 const port = process.env.PORT || 8080;
 http.listen(port, () => {
     console.log("Node JS is running on port 8080")
+    console.log("Hi Hello!")
 })
