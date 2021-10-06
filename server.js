@@ -9,6 +9,25 @@ const http = require('http').createServer(app);
 app.use(bodyParser.json());
 app.use(express.json());
 
+const userList = [
+    {
+      name : "Deva",
+      age : 20
+    },
+    {
+      name : "Rathinam",
+      age : 28
+    },
+    {
+      name : "John",
+      age : 29
+    },
+  ]
+  
+  app.get("/api/users", (request, response) => {
+    response.status(200).send(userList);
+  });
+
 
 
 
