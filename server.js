@@ -3,10 +3,16 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const app = express();
 const http = require('http').createServer(app);
+const cors = require('cors');
 
 
 app.use(bodyParser.json()); 
 app.use(express.json());
+app.use(cors({
+  credentials : true,
+  origin : "*"
+
+}));
 
 const connection = mysql.createConnection({
   host : "localhost",
